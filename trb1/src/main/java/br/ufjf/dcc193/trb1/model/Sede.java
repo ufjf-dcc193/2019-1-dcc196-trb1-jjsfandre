@@ -21,17 +21,13 @@ public class Sede {
 
 
     void Sede() {
+
     }
 
     
     
-    public Sede(String nomeFantasia,
-    String uf,
-    String cidade,
-    String bairro,
-    String telefone,
-    String email,
-    String site){
+    public Sede(String nomeFantasia, String uf, String cidade, String bairro, String telefone, String email, String site)
+    {
         this.nomeFantasia = nomeFantasia;
         this.uf = uf;
         this.cidade = cidade;
