@@ -17,6 +17,7 @@
 <!-- Custom and plugin javascript -->
 <script src="../../assets/js/inspinia.js"></script>
 <script src="../../assets/js/plugins/pace/pace.min.js"></script>
+<script src="../../assets/js/plugins/jasny/jasny-bootstrap.min.js"></script>
 
 
 </body>
