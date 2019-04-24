@@ -21,6 +21,7 @@
                                         <th>Cidade</th>
                                         <th>UF</th>
                                         <th>E-mail</th>
+                                        <th class="links-grid"><i class="fa fa-cogs"></i></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -31,6 +32,14 @@
                                                 <td>${sede.cidade}</td>
                                                 <td>${sede.uf}</td>
                                                 <td>${sede.email}</td>
+                                                <td class="links-grid">
+                                                    <a title="Editar" href="/Sede/Edit?id=${sede.id}">
+                                                        <i class= "fa fa-edit color-blue"></i>
+                                                    </a>
+                                                    <a title="Excluir" href="/Sede/Delete?id=${sede.id}">
+                                                        <i class= "fa fa-trash color-red"></i>
+                                                    </a>
+                                                </td>
                                             </tr>
                                     </c:forEach>
                                 </tbody>
