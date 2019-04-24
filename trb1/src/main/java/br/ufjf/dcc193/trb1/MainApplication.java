@@ -16,7 +16,7 @@ public class MainApplication {
 	public static void main(String[] args) {
 		//SpringApplication.run(MainApplication.class, args);
 		ConfigurableApplicationContext ctx = SpringApplication.run(MainApplication.class, args);
-		criarDadosTeste(ctx);
+		//criarDadosTeste(ctx);
 	}
 
 	public static void criarDadosTeste(ConfigurableApplicationContext ctx){
