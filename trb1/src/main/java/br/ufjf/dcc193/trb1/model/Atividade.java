@@ -1,7 +1,6 @@
 package br.ufjf.dcc193.trb1.model;
 
 
-import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,19 +16,19 @@ public class Atividade {
     private Long id;
     private String titulo;
     private String descricao;
-    private Date dtInicio; 
-    private Date dtFim;
+    private String dtInicio; 
+    private String dtFim;
     private Double hrComputCatAssistencial;
     private Double hrComputCatJuridica;
     private Double hrComputCatFinanceira;
     private Double hrComputCatExecutiva;
 
 
-    Atividade(){
+    public Atividade(){
 
     }
 
-    public Atividade(String titulo, String descricao, Date dtInicio, Date dtFim, Double hrComputCatAssistencial, Double hrComputCatJuridica, Double hrComputCatFinanceira, Double hrComputCatExecutiva)
+    public Atividade(String titulo, String descricao, String dtInicio, String dtFim, Double hrComputCatAssistencial, Double hrComputCatJuridica, Double hrComputCatFinanceira, Double hrComputCatExecutiva)
     {
         this.titulo = titulo;
         this.descricao = descricao;
@@ -88,28 +87,28 @@ public class Atividade {
     /**
      * @return the dtInicio
      */
-    public Date getDtInicio() {
+    public String getDtInicio() {
         return dtInicio;
     }
 
     /**
      * @param dtInicio the dtInicio to set
      */
-    public void setDtInicio(Date dtInicio) {
+    public void setDtInicio(String dtInicio) {
         this.dtInicio = dtInicio;
     }
 
     /**
      * @return the dtFim
      */
-    public Date getDtFim() {
+    public String getDtFim() {
         return dtFim;
     }
 
     /**
      * @param dtFim the dtFim to set
      */
-    public void setDtFim(Date dtFim) {
+    public void setDtFim(String dtFim) {
         this.dtFim = dtFim;
     }
 
