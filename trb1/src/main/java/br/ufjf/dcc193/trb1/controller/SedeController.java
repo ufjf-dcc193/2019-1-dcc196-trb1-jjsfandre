@@ -50,13 +50,27 @@ public class SedeController {
         return mv;
     }
 
+    @RequestMapping("Sede/New")
+    public ModelAndView create() {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("Sede/detail");
+        return mv;
+    }
+
+
     
     @RequestMapping("Sede/Save")
     public ModelAndView save(Sede s) {
         ModelAndView mv = new ModelAndView();
         mv.setViewName("Sede/list");
 
-        Sede sede = rep.findById(s.getId()).get();
+        Sede sede;
+
+        if (s.getId()!=null)
+            sede = rep.findById(s.getId()).get();
+        else
+            sede = new Sede();
+
         sede.setBairro(s.getBairro());
         sede.setCidade(s.getCidade());
         sede.setEmail(s.getEmail());
@@ -71,4 +85,5 @@ public class SedeController {
         mv.addObject("sedes", sedes);
         return mv;
     }
+
 }
