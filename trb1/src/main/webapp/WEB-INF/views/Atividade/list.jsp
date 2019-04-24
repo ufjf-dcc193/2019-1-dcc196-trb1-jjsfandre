@@ -20,6 +20,7 @@
                                         <th>Título</th>
                                         <th>Data início</th>
                                         <th>Data fim</th>
+                                        <th class="links-grid"><i class="fa fa-cogs"></i></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -29,6 +30,14 @@
                                                 <td>${atividade.titulo}</td>
                                                 <td>${atividade.dtInicio}</td>
                                                 <td>${atividade.dtFim}</td>
+                                                <td class="links-grid">
+                                                    <a title="Editar" href="/Atividade/Edit?id=${atividade.id}">
+                                                        <i class= "fa fa-edit color-blue"></i>
+                                                    </a>
+                                                    <a title="Excluir" href="/Atividade/Delete?id=${atividade.id}">
+                                                        <i class= "fa fa-trash color-red"></i>
+                                                    </a>
+                                                </td>
                                             </tr>
                                     </c:forEach>
                                 </tbody>
