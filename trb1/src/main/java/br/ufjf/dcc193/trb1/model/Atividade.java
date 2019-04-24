@@ -19,18 +19,18 @@ public class Atividade {
     private String descricao;
     private String dtInicio; 
     private String dtFim;
-    private Double hrComputCatAssistencial;
-    private Double hrComputCatJuridica;
-    private Double hrComputCatFinanceira;
-    private Double hrComputCatExecutiva;
-    private int sedeId;
+    private Double hrComputCatAssistencial =0.0;
+    private Double hrComputCatJuridica=0.0;
+    private Double hrComputCatFinanceira=0.0;
+    private Double hrComputCatExecutiva=0.0;
+    private Long sedeId;
 
 
     public Atividade(){
 
     }
 
-    public Atividade(String titulo, String descricao, String dtInicio, String dtFim, Double hrComputCatAssistencial, Double hrComputCatJuridica, Double hrComputCatFinanceira, Double hrComputCatExecutiva, int sedeId)
+    public Atividade(String titulo, String descricao, String dtInicio, String dtFim, Double hrComputCatAssistencial, Double hrComputCatJuridica, Double hrComputCatFinanceira, Double hrComputCatExecutiva, Long sedeId)
     {
         this.titulo = titulo;
         this.descricao = descricao;
@@ -119,7 +119,7 @@ public class Atividade {
      * @return the hrComputCatAssistencial
      */
     public Double getHrComputCatAssistencial() {
-        return hrComputCatAssistencial;
+        return hrComputCatAssistencial != null ? hrComputCatAssistencial : 0.0;
     }
 
     /**
@@ -133,7 +133,7 @@ public class Atividade {
      * @return the hrComputCatJuridica
      */
     public Double getHrComputCatJuridica() {
-        return hrComputCatJuridica;
+        return hrComputCatJuridica != null ? hrComputCatJuridica : 0.0;
     }
 
     /**
@@ -147,7 +147,7 @@ public class Atividade {
      * @return the hrComputCatFinanceira
      */
     public Double getHrComputCatFinanceira() {
-        return hrComputCatFinanceira;
+        return hrComputCatFinanceira != null ? hrComputCatFinanceira : 0.0;
     }
 
     /**
@@ -161,7 +161,7 @@ public class Atividade {
      * @return the hrComputCatExecutiva
      */
     public Double getHrComputCatExecutiva() {
-        return hrComputCatExecutiva;
+        return hrComputCatExecutiva != null ? hrComputCatExecutiva : 0.0;
     }
 
     /**
@@ -174,14 +174,14 @@ public class Atividade {
     /**
      * @return the sedeId
      */
-    public int getSedeId() {
+    public Long getSedeId() {
         return sedeId;
     }
 
     /**
      * @param sedeId the sedeId to set
      */
-    public void setSedeId(int sedeId) {
+    public void setSedeId(Long sedeId) {
         this.sedeId = sedeId;
     }
 

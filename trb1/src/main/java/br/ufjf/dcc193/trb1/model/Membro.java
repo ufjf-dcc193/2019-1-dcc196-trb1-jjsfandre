@@ -18,14 +18,14 @@ public class Membro {
     private String email;
     private String dtEntrada;
     private String dtSaida;
-    private int sedeId;
+    private Long sedeId;
 
 
     public Membro(){
 
     }
     
-    public Membro(String nome, String funcao, String email, String dtEntrada, String dtSaida, int sedeId)
+    public Membro(String nome, String funcao, String email, String dtEntrada, String dtSaida, Long sedeId)
     {
         this.nome = nome;
         this.funcao = funcao;
@@ -124,14 +124,14 @@ public class Membro {
     /**
      * @return the sedeId
      */
-    public int getSedeId() {
+    public Long getSedeId() {
         return sedeId;
     }
 
     /**
      * @param sedeId the sedeId to set
      */
-    public void setSedeId(int sedeId) {
+    public void setSedeId(Long sedeId) {
         this.sedeId = sedeId;
     }
 
