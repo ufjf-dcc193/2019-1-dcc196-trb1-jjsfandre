@@ -39,16 +39,10 @@ public class MainApplication {
 
 	public static void populaTabelaMembro(ConfigurableApplicationContext ctx){
 		MembroRepository rep = ctx.getBean(MembroRepository.class);
-		Date dtEntrada1 = new LocalDate(2019, 1, 1).toDate();
-		Date dtEntrada2 = new LocalDate(2019, 1, 2).toDate();
-		Date dtEntrada3 = new LocalDate(2019, 1, 3).toDate();
-		Date dtEntrada4 = new LocalDate(2019, 1, 4).toDate();
-		Date dtSaida1 = new LocalDate(2019, 1, 5).toDate();
-		Date dtSaida2 = new LocalDate(2019, 1, 6).toDate();
-		Membro m1 = new Membro("João da Silva", "Coordenador","joao@mail.com",dtEntrada1,dtSaida1 );
-		Membro m2 = new Membro("Maria Souza", "Auxiliar","maria@mail.com",dtEntrada2,dtSaida2 );
-		Membro m3 = new Membro("José Alvim", "Secretário","jose@mail.com",dtEntrada3,null );
-		Membro m4 = new Membro("Joana Gonçalves", "Diretora","joana@mail.com",dtEntrada4,null );
+		Membro m1 = new Membro("João da Silva", "Coordenador","joao@mail.com","01/01/2019","05/01/2019" );
+		Membro m2 = new Membro("Maria Souza", "Auxiliar","maria@mail.com","02/01/2019","05/01/2019" );
+		Membro m3 = new Membro("José Alvim", "Secretário","jose@mail.com","03/01/2019",null );
+		Membro m4 = new Membro("Joana Gonçalves", "Diretora","joana@mail.com","04/01/2019",null );
 		rep.save(m1);
 		rep.save(m2);
 		rep.save(m3);
