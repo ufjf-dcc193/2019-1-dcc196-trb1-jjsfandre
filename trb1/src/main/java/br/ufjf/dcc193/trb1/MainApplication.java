@@ -1,8 +1,5 @@
 package br.ufjf.dcc193.trb1;
 
-import java.util.Date;
-
-import org.joda.time.LocalDate;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
