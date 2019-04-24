@@ -50,18 +50,10 @@ public class MainApplication {
 	}
 	public static void populaTabelaAtividade(ConfigurableApplicationContext ctx){
 		AtividadeRepository rep = ctx.getBean(AtividadeRepository.class);
-		Date dtInicio1 = new LocalDate(2019, 1, 1).toDate();
-		Date dtInicio2 = new LocalDate(2019, 1, 2).toDate();
-		Date dtInicio3 = new LocalDate(2019, 1, 3).toDate();
-		Date dtInicio4 = new LocalDate(2019, 1, 4).toDate();
-		Date dtFim1 = new LocalDate(2019, 2, 1).toDate();
-		Date dtFim2 = new LocalDate(2019, 2, 2).toDate();
-		Date dtFim3 = new LocalDate(2019, 2, 3).toDate();
-		Date dtFim4 = new LocalDate(2019, 2, 4).toDate();
-		Atividade a1 = new Atividade("Atividade 1","Descrição 1", dtInicio1, dtFim1,10.0,20.0,30.0,40.0);
-		Atividade a2 = new Atividade("Atividade 2","Descrição 2", dtInicio2, dtFim2,50.0,60.0,70.0,80.0);
-		Atividade a3 = new Atividade("Atividade 3","Descrição 3", dtInicio3, dtFim3,90.0,100.0,110.0,120.0);
-		Atividade a4 = new Atividade("Atividade 4","Descrição 4", dtInicio4, dtFim4,130.0,140.0,150.0,160.0);
+		Atividade a1 = new Atividade("Atividade 1","Descrição 1", "01/01/2019","01/02/2019",10.0,20.0,30.0,40.0);
+		Atividade a2 = new Atividade("Atividade 2","Descrição 2", "02/01/2019","02/02/2019",50.0,60.0,70.0,80.0);
+		Atividade a3 = new Atividade("Atividade 3","Descrição 3", "03/01/2019","03/02/2019",90.0,100.0,110.0,120.0);
+		Atividade a4 = new Atividade("Atividade 4","Descrição 4", "04/01/2019","04/02/2019",130.0,140.0,150.0,160.0);
 		rep.save(a1);
 		rep.save(a2);
 		rep.save(a3);
