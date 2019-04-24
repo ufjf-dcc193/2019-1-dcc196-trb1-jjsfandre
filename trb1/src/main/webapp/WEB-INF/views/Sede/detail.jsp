@@ -14,7 +14,7 @@
                 </div>
                 <div class="ibox-content">
                     <div class="row">
-                        <form role="form" action="/Sede/Save" method="post">
+                        <form role="form" action="/Sede/Save" method="post" class="form-control">
                             <input type="hidden" name="id" value="${sede.id}" />
                             <div class="form-group"><label>Nome fantasia</label> <input value="${sede.nomeFantasia}" type="text" name="nomeFantasia" placeholder="Digite o nome fantasia" class="form-control"></div>
                             <div class="form-group"><label>UF</label> <input value="${sede.uf}" type="text" name="uf" placeholder="UF" class="form-control"></div>
@@ -23,9 +23,11 @@
                             <div class="form-group"><label>Telefone</label> <input value="${sede.telefone}" type="text" name="telefone" placeholder="Digite o telefone" class="form-control"></div>
                             <div class="form-group"><label>E-mail</label> <input value="${sede.email}" type="email" name="email" placeholder="Digite o e-mail" class="form-control"></div>
                             <div class="form-group"><label>Site</label> <input value="${sede.site}" type="text" name="site" placeholder="Digite o site" class="form-control"></div>
-                            <div>
-                                <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>Salvar</strong></button>
-                                <a href="/Sede/list"><button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>Cancelar</strong></button></a>
+                            <div class="form-group buttons-submit-cancel">
+                                <div class="col-sm-4 ">
+                                    <a href="/Sede/list"><button class="btn btn-danger" type="button"><i class="fa fa-times"></i>Cancelar</button></a>
+                                    <button class="btn btn-primary" type="submit"><i class="fa fa-check"></i>Salvar</button>
+                                </div>
                             </div>
                         </form>
                     </div>
