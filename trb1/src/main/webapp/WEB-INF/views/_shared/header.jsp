@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>TesteSistema de gestão de ONGs</title>
+    <title>Sistema de gestão de ONGs</title>
 
     <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="../../assets/font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -31,8 +31,41 @@
                     </div>
                 </li>
                 <li>
-                    <a href="index.html"><i class="fa fa-home"></i> <span class="nav-label">Home</span></a>
+                    <a href="/Home"><i class="fa fa-home"></i> <span class="nav-label">Home</span></a>
                 </li>
+                <li>
+                    <a href="#"><i class="fa fa-tasks"></i> <span class="nav-label">Atividades</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li>
+                            <a href="/Atividade/list"><i class="fa fa-list-ul"></i> <span class="nav-label">Listar atividades</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-users"></i> <span class="nav-label">Membros</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li>
+                            <a href="/Membro/list"><i class="fa fa-list-ul"></i> <span class="nav-label">Listar membros</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-building-o"></i> <span class="nav-label">Sedes</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li>
+                            <a href="/Sede/list"><i class="fa fa-list-ul"></i> <span class="nav-label">Listar sedes</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-line-chart"></i> <span class="nav-label">Relatórios</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li>
+                            <a href="/Relatorio/SomaHoraCategoriaPorSede"><i class="fa fa-clock-o"></i> <span class="nav-label">Soma de horas em categorias por sede</span></a>
+                        </li>
+                    </ul>
+                </li>
+                
                 
             </ul>
 
