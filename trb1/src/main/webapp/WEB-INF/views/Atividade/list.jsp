@@ -13,7 +13,7 @@
                             </div>
                         </div>
                         <div class="ibox-content">
-                            <form class="form-control form-new-resume" action="/Membro/New">
+                            <form class="form-control form-new-resume" action="/Atividade/New">
                                 <div class="form-group">
                                     <div class="col-sm-4 ">
                                         <button class="btn btn-w-m btn-success" type="submit"><i class="fa fa-plus"></i>Adicionar atividade</button>

@@ -61,6 +61,8 @@ public class AtividadeController {
     public ModelAndView create() {
         ModelAndView mv = new ModelAndView();
         mv.setViewName("Atividade/detail");
+        List<Sede> listaSedes = sedeRep.findAll();
+        mv.addObject("listaSedes", listaSedes);
         return mv;
     }
 

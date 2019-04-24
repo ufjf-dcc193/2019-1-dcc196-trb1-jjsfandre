@@ -62,6 +62,8 @@ public class MembroController {
     public ModelAndView create() {
         ModelAndView mv = new ModelAndView();
         mv.setViewName("Membro/detail");
+        List<Sede> listaSedes = sedeRep.findAll();
+        mv.addObject("listaSedes", listaSedes);
         return mv;
     }
 
