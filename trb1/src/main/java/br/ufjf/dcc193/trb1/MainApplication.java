@@ -1,5 +1,7 @@
 package br.ufjf.dcc193.trb1;
 
+import java.util.List;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -13,7 +15,7 @@ public class MainApplication {
 	public static void main(String[] args) {
 		//SpringApplication.run(MainApplication.class, args);
 		ConfigurableApplicationContext ctx = SpringApplication.run(MainApplication.class, args);
-		//criarDadosTeste(ctx);
+		criarDadosTeste(ctx);
 	}
 
 	public static void criarDadosTeste(ConfigurableApplicationContext ctx){
@@ -35,11 +37,13 @@ public class MainApplication {
 	}
 
 	public static void populaTabelaMembro(ConfigurableApplicationContext ctx){
+		SedeRepository sedeRep = ctx.getBean(SedeRepository.class);
+		Long sedeID = sedeRep.findAll().get(0).getId();
 		MembroRepository rep = ctx.getBean(MembroRepository.class);
-		Membro m1 = new Membro("João da Silva", "Coordenador","joao@mail.com","01/01/2019","05/01/2019",0);
-		Membro m2 = new Membro("Maria Souza", "Auxiliar","maria@mail.com","02/01/2019","05/01/2019",0 );
-		Membro m3 = new Membro("José Alvim", "Secretário","jose@mail.com","03/01/2019",null,0 );
-		Membro m4 = new Membro("Joana Gonçalves", "Diretora","joana@mail.com","04/01/2019",null,0 );
+		Membro m1 = new Membro("João da Silva", "Coordenador","joao@mail.com","01/01/2019","05/01/2019",sedeID);
+		Membro m2 = new Membro("Maria Souza", "Auxiliar","maria@mail.com","02/01/2019","05/01/2019",sedeID );
+		Membro m3 = new Membro("José Alvim", "Secretário","jose@mail.com","03/01/2019",null,sedeID );
+		Membro m4 = new Membro("Joana Gonçalves", "Diretora","joana@mail.com","04/01/2019",null,sedeID );
 		rep.save(m1);
 		rep.save(m2);
 		rep.save(m3);
@@ -47,10 +51,12 @@ public class MainApplication {
 	}
 	public static void populaTabelaAtividade(ConfigurableApplicationContext ctx){
 		AtividadeRepository rep = ctx.getBean(AtividadeRepository.class);
-		Atividade a1 = new Atividade("Atividade 1","Descrição 1", "01/01/2019","01/02/2019",10.0,20.0,30.0,40.0,0);
-		Atividade a2 = new Atividade("Atividade 2","Descrição 2", "02/01/2019","02/02/2019",50.0,60.0,70.0,80.0,0);
-		Atividade a3 = new Atividade("Atividade 3","Descrição 3", "03/01/2019","03/02/2019",90.0,100.0,110.0,120.0,0);
-		Atividade a4 = new Atividade("Atividade 4","Descrição 4", "04/01/2019","04/02/2019",130.0,140.0,150.0,160.0,0);
+		SedeRepository sedeRep = ctx.getBean(SedeRepository.class);
+		Long sedeID = sedeRep.findAll().get(0).getId();
+		Atividade a1 = new Atividade("Atividade 1","Descrição 1", "01/01/2019","01/02/2019",10.0,20.0,30.0,40.0,sedeID);
+		Atividade a2 = new Atividade("Atividade 2","Descrição 2", "02/01/2019","02/02/2019",50.0,60.0,70.0,80.0,sedeID);
+		Atividade a3 = new Atividade("Atividade 3","Descrição 3", "03/01/2019","03/02/2019",90.0,100.0,110.0,120.0,sedeID);
+		Atividade a4 = new Atividade("Atividade 4","Descrição 4", "04/01/2019","04/02/2019",130.0,140.0,150.0,160.0,sedeID);
 		rep.save(a1);
 		rep.save(a2);
 		rep.save(a3);
