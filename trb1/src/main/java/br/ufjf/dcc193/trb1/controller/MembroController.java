@@ -25,4 +25,64 @@ public class MembroController {
         mv.addObject("membros", membros);
         return mv;
     }
+
+
+
+    @RequestMapping("Membro/Delete")
+    public ModelAndView delete(Long id) {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("Membro/list");
+
+        Membro membro = rep.findById(id).get();
+        rep.delete(membro);
+
+        List<Membro> membros = rep.findAll();
+        mv.addObject("membros", membros);
+        return mv;
+    }
+
+    @RequestMapping("Membro/Edit")
+    public ModelAndView edit(Long id) {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("Membro/detail");
+
+        Membro membro = rep.findById(id).get();
+
+        mv.addObject("membro", membro);
+        return mv;
+    }
+
+    @RequestMapping("Membro/New")
+    public ModelAndView create() {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("Membro/detail");
+        return mv;
+    }
+
+
+    
+    @RequestMapping("Membro/Save")
+    public ModelAndView save(Membro m) {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("Membro/list");
+
+        Membro membro;
+
+        if (m.getId()!=null)
+            membro = rep.findById(m.getId()).get();
+        else
+            membro = new Membro();
+            
+        membro.setNome(m.getNome());
+        membro.setFuncao(m.getFuncao());
+        membro.setEmail(m.getEmail());
+        membro.setDtEntrada(m.getDtEntrada());
+        membro.setDtSaida(m.getDtSaida());
+
+        rep.save(membro);
+
+        List<Membro> membros = rep.findAll();
+        mv.addObject("membros", membros);
+        return mv;
+    }
 }

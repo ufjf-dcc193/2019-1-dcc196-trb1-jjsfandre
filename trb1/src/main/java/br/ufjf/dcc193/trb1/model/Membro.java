@@ -18,15 +18,15 @@ public class Membro {
     private String nome;
     private String funcao;
     private String email;
-    private Date dtEntrada;
-    private Date dtSaida;
+    private String dtEntrada;
+    private String dtSaida;
 
 
-    Membro(){
+    public Membro(){
 
     }
-
-    public Membro(String nome, String funcao, String email, Date dtEntrada, Date dtSaida)
+    
+    public Membro(String nome, String funcao, String email, String dtEntrada, String dtSaida)
     {
         this.nome = nome;
         this.funcao = funcao;
@@ -96,30 +96,32 @@ public class Membro {
     /**
      * @return the dtEntrada
      */
-    public Date getDtEntrada() {
+    public String getDtEntrada() {
         return dtEntrada;
     }
 
     /**
      * @param dtEntrada the dtEntrada to set
      */
-    public void setDtEntrada(Date dtEntrada) {
+    public void setDtEntrada(String dtEntrada) {
         this.dtEntrada = dtEntrada;
     }
 
     /**
      * @return the dtSaida
      */
-    public Date getDtSaida() {
+    public String getDtSaida() {
         return dtSaida;
     }
 
     /**
      * @param dtSaida the dtSaida to set
      */
-    public void setDtSaida(Date dtSaida) {
+    public void setDtSaida(String dtSaida) {
         this.dtSaida = dtSaida;
     }
+
+    
 
     //#endregion
 }
