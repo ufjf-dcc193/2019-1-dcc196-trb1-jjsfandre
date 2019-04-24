@@ -61,7 +61,7 @@
                     <a href="#"><i class="fa fa-line-chart"></i> <span class="nav-label">Relatórios</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
                         <li>
-                            <a href="/Relatorio/SomaHoraCategoriaPorSede"><i class="fa fa-clock-o"></i> <span class="nav-label">Soma de horas em categorias por sede</span></a>
+                            <a href="/Relatorio/somaHoraCategoriaPorSede"><i class="fa fa-clock-o"></i> <span class="nav-label">Soma de horas em categorias por sede</span></a>
                         </li>
                     </ul>
                 </li>
