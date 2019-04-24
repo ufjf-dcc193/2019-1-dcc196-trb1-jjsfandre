@@ -25,7 +25,7 @@ public class Atividade {
     private Double hrComputCatExecutiva;
 
 
-    void Atividade(){
+    Atividade(){
 
     }
 

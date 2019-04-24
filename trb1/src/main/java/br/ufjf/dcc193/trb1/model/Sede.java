@@ -20,7 +20,7 @@ public class Sede {
     private String site;
 
 
-    void Sede() {
+    Sede() {
 
     }
 

@@ -22,7 +22,7 @@ public class Membro {
     private Date dtSaida;
 
 
-    void Membro(){
+    Membro(){
 
     }
 
