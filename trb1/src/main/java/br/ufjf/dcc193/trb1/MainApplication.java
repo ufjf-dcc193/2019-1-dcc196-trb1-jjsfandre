@@ -36,10 +36,10 @@ public class MainApplication {
 
 	public static void populaTabelaMembro(ConfigurableApplicationContext ctx){
 		MembroRepository rep = ctx.getBean(MembroRepository.class);
-		Membro m1 = new Membro("João da Silva", "Coordenador","joao@mail.com","01/01/2019","05/01/2019" );
-		Membro m2 = new Membro("Maria Souza", "Auxiliar","maria@mail.com","02/01/2019","05/01/2019" );
-		Membro m3 = new Membro("José Alvim", "Secretário","jose@mail.com","03/01/2019",null );
-		Membro m4 = new Membro("Joana Gonçalves", "Diretora","joana@mail.com","04/01/2019",null );
+		Membro m1 = new Membro("João da Silva", "Coordenador","joao@mail.com","01/01/2019","05/01/2019",0);
+		Membro m2 = new Membro("Maria Souza", "Auxiliar","maria@mail.com","02/01/2019","05/01/2019",0 );
+		Membro m3 = new Membro("José Alvim", "Secretário","jose@mail.com","03/01/2019",null,0 );
+		Membro m4 = new Membro("Joana Gonçalves", "Diretora","joana@mail.com","04/01/2019",null,0 );
 		rep.save(m1);
 		rep.save(m2);
 		rep.save(m3);
@@ -47,10 +47,10 @@ public class MainApplication {
 	}
 	public static void populaTabelaAtividade(ConfigurableApplicationContext ctx){
 		AtividadeRepository rep = ctx.getBean(AtividadeRepository.class);
-		Atividade a1 = new Atividade("Atividade 1","Descrição 1", "01/01/2019","01/02/2019",10.0,20.0,30.0,40.0);
-		Atividade a2 = new Atividade("Atividade 2","Descrição 2", "02/01/2019","02/02/2019",50.0,60.0,70.0,80.0);
-		Atividade a3 = new Atividade("Atividade 3","Descrição 3", "03/01/2019","03/02/2019",90.0,100.0,110.0,120.0);
-		Atividade a4 = new Atividade("Atividade 4","Descrição 4", "04/01/2019","04/02/2019",130.0,140.0,150.0,160.0);
+		Atividade a1 = new Atividade("Atividade 1","Descrição 1", "01/01/2019","01/02/2019",10.0,20.0,30.0,40.0,0);
+		Atividade a2 = new Atividade("Atividade 2","Descrição 2", "02/01/2019","02/02/2019",50.0,60.0,70.0,80.0,0);
+		Atividade a3 = new Atividade("Atividade 3","Descrição 3", "03/01/2019","03/02/2019",90.0,100.0,110.0,120.0,0);
+		Atividade a4 = new Atividade("Atividade 4","Descrição 4", "04/01/2019","04/02/2019",130.0,140.0,150.0,160.0,0);
 		rep.save(a1);
 		rep.save(a2);
 		rep.save(a3);

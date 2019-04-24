@@ -9,6 +9,7 @@ import javax.persistence.Id;
 
 
 
+
 @Entity
 public class Atividade {
     @Id
@@ -22,13 +23,14 @@ public class Atividade {
     private Double hrComputCatJuridica;
     private Double hrComputCatFinanceira;
     private Double hrComputCatExecutiva;
+    private int sedeId;
 
 
     public Atividade(){
 
     }
 
-    public Atividade(String titulo, String descricao, String dtInicio, String dtFim, Double hrComputCatAssistencial, Double hrComputCatJuridica, Double hrComputCatFinanceira, Double hrComputCatExecutiva)
+    public Atividade(String titulo, String descricao, String dtInicio, String dtFim, Double hrComputCatAssistencial, Double hrComputCatJuridica, Double hrComputCatFinanceira, Double hrComputCatExecutiva, int sedeId)
     {
         this.titulo = titulo;
         this.descricao = descricao;
@@ -38,6 +40,7 @@ public class Atividade {
         this.hrComputCatJuridica = hrComputCatJuridica;
         this.hrComputCatFinanceira = hrComputCatFinanceira;
         this.hrComputCatExecutiva = hrComputCatExecutiva;
+        this.sedeId =  sedeId;
     }
 
     //#region getters and setters
@@ -166,6 +169,20 @@ public class Atividade {
      */
     public void setHrComputCatExecutiva(Double hrComputCatExecutiva) {
         this.hrComputCatExecutiva = hrComputCatExecutiva;
+    }
+
+    /**
+     * @return the sedeId
+     */
+    public int getSedeId() {
+        return sedeId;
+    }
+
+    /**
+     * @param sedeId the sedeId to set
+     */
+    public void setSedeId(int sedeId) {
+        this.sedeId = sedeId;
     }
 
     //#endregion

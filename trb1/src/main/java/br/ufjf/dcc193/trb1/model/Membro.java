@@ -18,19 +18,21 @@ public class Membro {
     private String email;
     private String dtEntrada;
     private String dtSaida;
+    private int sedeId;
 
 
     public Membro(){
 
     }
     
-    public Membro(String nome, String funcao, String email, String dtEntrada, String dtSaida)
+    public Membro(String nome, String funcao, String email, String dtEntrada, String dtSaida, int sedeId)
     {
         this.nome = nome;
         this.funcao = funcao;
         this.email = email;
         this.dtEntrada = dtEntrada;
         this.dtSaida = dtSaida;
+        this.sedeId = sedeId;
     }
 
     //#region getters and setters
@@ -117,6 +119,20 @@ public class Membro {
      */
     public void setDtSaida(String dtSaida) {
         this.dtSaida = dtSaida;
+    }
+
+    /**
+     * @return the sedeId
+     */
+    public int getSedeId() {
+        return sedeId;
+    }
+
+    /**
+     * @param sedeId the sedeId to set
+     */
+    public void setSedeId(int sedeId) {
+        this.sedeId = sedeId;
     }
 
     
