@@ -8,13 +8,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import br.ufjf.dcc193.trb1.model.Atividade;
+import br.ufjf.dcc193.trb1.model.Sede;
 import br.ufjf.dcc193.trb1.repository.AtividadeRepository;
+import br.ufjf.dcc193.trb1.repository.SedeRepository;
 
 
 @Controller
 public class AtividadeController {
     @Autowired
     AtividadeRepository rep;
+    @Autowired
+    SedeRepository sedeRep;
 
 
     @RequestMapping("Atividade/list")
@@ -46,8 +50,10 @@ public class AtividadeController {
         mv.setViewName("Atividade/detail");
 
         Atividade atividade = rep.findById(id).get();
+        List<Sede> listaSedes = sedeRep.findAll();
 
         mv.addObject("atividade", atividade);
+        mv.addObject("listaSedes", listaSedes);
         return mv;
     }
 
@@ -80,6 +86,7 @@ public class AtividadeController {
         atividade.setHrComputCatJuridica(a.getHrComputCatJuridica());
         atividade.setHrComputCatFinanceira(a.getHrComputCatFinanceira());
         atividade.setHrComputCatExecutiva(a.getHrComputCatExecutiva());
+        atividade.setSedeId(a.getSedeId());
 
         rep.save(atividade);
 

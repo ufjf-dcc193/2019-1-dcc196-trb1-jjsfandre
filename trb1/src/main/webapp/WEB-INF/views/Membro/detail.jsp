@@ -25,6 +25,23 @@
                                 <input value="${membro.funcao}" type="text" name="funcao" placeholder="Digite a função" class="form-control">
                             </div>
                             <div class="form-group">
+                                <label>Sede</label> 
+                                
+                                <select class="form-control m-b" name="sedeId">
+                                    <option value="0">Escolha a sede</option>
+                                    <c:forEach var="sede" items="${listaSedes}">
+                                        <c:choose>
+                                            <c:when test="${sede.id==membro.sedeId}">
+                                                <option selected value="${sede.id}">${sede.nomeFantasia}</option>
+                                            </c:when>
+                                            <c:otherwise>
+                                                <option value="${sede.id}">${sede.nomeFantasia}</option>
+                                            </c:otherwise>
+                                        </c:choose>
+                                    </c:forEach>
+                                </select>
+                            </div>
+                            <div class="form-group">
                                 <label>E-mail</label> 
                                 <input value="${membro.email}" type="email" name="email" placeholder="Digite o email" class="form-control">
                             </div>

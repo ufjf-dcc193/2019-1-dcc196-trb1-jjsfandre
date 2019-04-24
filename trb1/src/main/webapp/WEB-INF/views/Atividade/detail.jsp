@@ -1,4 +1,4 @@
-
+﻿
 <%@ include file="../_shared/header.jsp" %>
 <div class="wrapper wrapper-content animated fadeInRight">
     <div class="row">
@@ -23,6 +23,23 @@
                             <div class="form-group">
                                 <label>Descrição</label> 
                                 <textarea value="${atividade.descricao}" type="text" name="descricao" placeholder="Digite a descrição" class="form-control"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Sede</label> 
+                                
+                                <select class="form-control m-b" name="sedeId">
+                                    <option value="0">Escolha a sede</option>
+                                    <c:forEach var="sede" items="${listaSedes}">
+                                        <c:choose>
+                                            <c:when test="${sede.id==atividade.sedeId}">
+                                                <option selected value="${sede.id}">${sede.nomeFantasia}</option>
+                                            </c:when>
+                                            <c:otherwise>
+                                                <option value="${sede.id}">${sede.nomeFantasia}</option>
+                                            </c:otherwise>
+                                        </c:choose>
+                                    </c:forEach>
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label>Data de início da atividade</label> 

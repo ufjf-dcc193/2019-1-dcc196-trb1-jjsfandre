@@ -8,13 +8,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import br.ufjf.dcc193.trb1.model.Membro;
+import br.ufjf.dcc193.trb1.model.Sede;
 import br.ufjf.dcc193.trb1.repository.MembroRepository;
+import br.ufjf.dcc193.trb1.repository.SedeRepository;
 
 
 @Controller
 public class MembroController {
     @Autowired
     MembroRepository rep;
+    @Autowired
+    SedeRepository sedeRep;
 
     @RequestMapping("Membro/list")
     public ModelAndView list(){
@@ -49,6 +53,8 @@ public class MembroController {
         Membro membro = rep.findById(id).get();
 
         mv.addObject("membro", membro);
+        List<Sede> listaSedes = sedeRep.findAll();
+        mv.addObject("listaSedes", listaSedes);
         return mv;
     }
 
@@ -78,6 +84,7 @@ public class MembroController {
         membro.setEmail(m.getEmail());
         membro.setDtEntrada(m.getDtEntrada());
         membro.setDtSaida(m.getDtSaida());
+        membro.setSedeId(m.getSedeId());
 
         rep.save(membro);
 
